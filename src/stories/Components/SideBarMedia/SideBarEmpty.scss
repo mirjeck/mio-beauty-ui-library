@@ -1,0 +1,55 @@
+@use "../../../styles/variables.scss" as *;
+@use "../../../styles/type-primitives" as *;
+@use "../../../styles/mixins-font" as *;
+@use "../../../styles/tokens" as *;
+
+.storybook-sidebar-empty-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 232px;
+
+    .storybook-sidebar-empty-icon {
+        width: 40px;
+        height: 40px;
+        stroke: $colorbase-gray-gray-12-value;
+    }
+
+    .storybook-sidebar-empty-text-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 4px;
+        font-family: inter;
+
+
+        .storybook-sidebar-empty-text {
+            margin: 0;
+            color: $colorbase-gray-gray-19-value;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 16px;
+        }
+
+        .storybook-sidebar-empty-subtext {
+            margin: 0;
+            font-size: 12px;
+            color: $colorbase-gray-gray-12-value;
+            line-height: 120%;
+        }
+    }
+
+    .storybook-sidebar-empty-button-icon {
+        width: 16px;
+        height: 16px;
+    }
+
+    .storybook-sidebar-empty-button-text {
+        font-size: 14px;
+    }
+
+}

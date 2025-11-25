@@ -1,0 +1,30 @@
+@use "../../../styles/variables.scss" as *;
+@use "../../../styles/type-primitives" as *;
+@use "../../../styles/mixins-font" as *;
+@use "../../../styles/tokens" as *;
+
+
+.storybook--sidebar-icon-button {
+    background-color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 2px;
+    cursor: pointer;
+    transition: $smooth;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+        background-color: $colorbase-gray-gray-2-value;
+    }
+
+    &:active {
+        background-color: $colorbase-gray-gray-4-value;
+    }
+}
+
+.storybook--sidebar-icon {
+    width: 16px;
+    height: 16px;
+}

@@ -8,8 +8,8 @@ export const Button = ({
   size = 'medium',
   tone = 'neutral',
   type = 'flled',
-  leftIcon = true,
-  rightIcon = true,
+  leftIcon = false,
+  rightIcon = false,
   disabled = false,
   label,
   ...props

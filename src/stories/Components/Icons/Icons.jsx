@@ -5,5 +5,5 @@ export const Icon = ({ name, size = 24, fill = "none", ...props }) => {
     const Component = ImIcons[name];
     if (!Component) return null;
 
-    return <Component width={size} height={size} fill={fill} {...props} />;
+    return <Component width={size} height={size} fill={fill} stroke='#131314' {...props} />;
 };

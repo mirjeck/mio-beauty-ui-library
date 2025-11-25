@@ -231,6 +231,7 @@
 .storybook-button--extra-small {
   padding: 4px 6px;
   gap: 2px;
+  border-radius: 6px;
   @include type-Subhead-Regular;
 
   .input-icon {

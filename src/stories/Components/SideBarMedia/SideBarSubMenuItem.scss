@@ -1,0 +1,45 @@
+@use "../../../styles/variables.scss" as *;
+@use "../../../styles/type-primitives" as *;
+@use "../../../styles/mixins-font" as *;
+@use "../../../styles/tokens" as *;
+
+.storybook-sidebar-submenu-item-button {
+    padding: 6px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    transition: $smooth;
+    border-radius: 8px;
+    font-family: inter;
+}
+
+.storybook-sidebar-submenu-item-button--default {
+    .storybook-sidebar-submenu-item {
+        width: 200px;
+        text-align: left;
+        margin: 0;
+
+    }
+
+    &:hover {
+        background-color: $colorbase-gray-gray-2-value;
+    }
+
+    &:active {
+        background-color: $colorbase-gray-gray-4-value;
+    }
+}
+
+.storybook-sidebar-submenu-item-button--disabled {
+    cursor: default;
+
+    .storybook-sidebar-submenu-item {
+        width: 200px;
+        text-align: left;
+        margin: 0;
+        color: $colorbase-gray-gray-7-value;
+    }
+}

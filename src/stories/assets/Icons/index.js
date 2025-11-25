@@ -1,4 +1,5 @@
 import AddIcon from "./ic_add_outlined.svg?react";
+import MinusIcon from "./ic_minus.svg?react";
 import ArrowDownIcon from "./ic_arrow_down.svg?react";
 import ArrowLeftIcon from "./ic_arrow_left.svg?react";
 import ArrowTopRightSquareIcon from "./ic_arrow_top_right_square.svg?react";
@@ -46,14 +47,18 @@ import UsersIcon from "./ic_users.svg?react";
 
 import Admins from "./ic_admins.svg?react";
 import CollapsedHorizontal from "./ic_collapsed_horizontal.svg?react";
-import DidebarClose from './ic_didebar_close.svg?react';
-import DidebarOpen from './ic_didebar_open.svg?react';
+import DidebarClose from './ic_sidebar_close.svg?react';
+import DidebarOpen from './ic_sidebar_open.svg?react';
 import GaleryVertical from './ic_galery_vertical.svg?react';
 import Mail from './ic_mail.svg?react';
 import Password from './ic_password.svg?react';
 import SupportLogo from './ic_support_logo.svg?react';
 import UserGroup from './ic_user_group.svg?react'
-
+import IconTop from './ic_right.svg?react';
+import IconBottom from './ic_down.svg?react';
+import IconUp from "./ic_up.svg?react";
+import IconDown from "./ic_down.svg?react";
+import EmtyBar from './ic_empty.svg?react'
 
 
 
@@ -79,12 +84,15 @@ export const ImIcons = {
     ic_clock: ClockIcon,
     ic_collapsed_horizontal: CollapsedHorizontal,
     ic_copy_outlined: CopyOutlinedIcon, // C
-    ic_didebar_close: DidebarClose,
-    ic_didebar_open: DidebarOpen,
+    ic_sidebar_close: DidebarClose,
+    ic_sidebar_open: DidebarOpen,
+    ic_bottom: IconBottom,
     ic_doc: DocIcon,
+    ic_down: IconDown,
     ic_double_check: DoubleCheckIcon, // D
     ic_edit_outlined: EditOutlinedIcon,
     ic_eye_outlined: EyeOutlinedIcon,
+    ic_empty_bar: EmtyBar,
     ic_eye_slash_outlined: EyeSlashOutlinedIcon, // E
     ic_filter_outlined: FilterOutlinedIcon, // F
     ic_galery_vertical: GaleryVertical, // G
@@ -99,6 +107,7 @@ export const ImIcons = {
     ic_media: MediaIcon,
     ic_metrics: MetricsIcon,
     ic_microphone: MicrophoneIcon,
+    ic_minus: MinusIcon,
     ic_more: MoreIcon, // M
     ic_no_internet: NoInternetIcon, // N
     ic_password: Password,
@@ -112,10 +121,12 @@ export const ImIcons = {
     ic_stat_outlined: StatOutlinedIcon,
     ic_support_logo: SupportLogo,
     ic_swatch: SwatchIcon, // S
+    ic_top: IconTop,
     ic_trash_outlined: TrashOutlinedIcon, // T
     ic_upload: UploadIcon,
     ic_user: UserIcon,
     ic_user_group: UserGroup,
     ic_user_new: UserNewIcon,
+    ic_up: IconUp,
     ic_users: UsersIcon, // U
 };

@@ -6,7 +6,31 @@
 
 
 .storybook--sidebar-header-icon {
-    color: black;
     width: 16px;
     height: 16px;
+    stroke: $colorbase-gray-gray-19-value;
+}
+
+.storybook--sidebar-header-button {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    padding: 6px;
+    border-radius: 8px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    transition: $smooth;
+
+    &:hover {
+        background-color: $colorbase-gray-gray-2-value;
+    }
+
+    &:active {
+        background-color: $colorbase-gray-gray-18-value;
+
+        .storybook--sidebar-header-icon {
+            stroke: white;
+        }
+    }
 }
