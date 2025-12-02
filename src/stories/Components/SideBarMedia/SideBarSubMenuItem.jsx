@@ -5,7 +5,7 @@ import "./SideBarSubMenuItem.scss";
 
 
 export const SideBarSubMenuItem = ({
-    text = "Menu item",
+    text = "Sub Menu item",
     disabled = false
 }) => {
     return (

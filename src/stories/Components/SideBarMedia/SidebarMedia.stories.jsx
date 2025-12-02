@@ -5,6 +5,8 @@ import { SideBarHeaderIcon } from "./SideBarHeaderIcon.jsx";
 import { SideBarIcon } from "./SideBarIcon.jsx";
 import { SideBarEmpty } from "./SideBarEmpty.jsx";
 import { SideBarSubMenuItem } from "./SideBarSubMenuItem.jsx";
+import { SideBarSubMenu } from "./SideBarSubMenu.jsx";
+import { SideBarMenuRow } from "./SideBarMenuRow.jsx";
 
 export default {
     title: "Example/Sidebar",
@@ -69,11 +71,43 @@ const SideBarMenuItemTemplate = (args) => <SideBarSubMenuItem {...args} />;
 export const MenuItem = SideBarMenuItemTemplate.bind({});
 
 MenuItem.args = {
-    text: "Menu item",
+    text: "Sub Menu item",
     disabled: false
 };
 
 MenuItem.argTypes = {
     text: { control: "text" },
     disabled: { control: "boolean" }
+};
+
+const SideBarSubMenuTemplate = (args) => <SideBarSubMenu {...args} />;
+export const SubMenu = SideBarSubMenuTemplate.bind({});
+
+SubMenu.args = {
+    items: [
+        "Sub Menu item",
+        "Sub Menu item",
+        "Sub Menu item",
+        "Sub Menu item",
+        "Sub Menu item",
+    ],
+    border: true
+};
+
+SubMenu.argTypes = {
+    items: { control: "object" },
+    border: { control: "boolean" }
+};
+
+const SideBarMenuRowTemplate = (args) => <SideBarMenuRow {...args} />;
+
+
+export const MenuRowStates = SideBarMenuRowTemplate.bind({});
+
+MenuRowStates.args = {
+    label: "Menu item"
+};
+
+MenuRowStates.argTypes = {
+    label: { control: "text" }
 };

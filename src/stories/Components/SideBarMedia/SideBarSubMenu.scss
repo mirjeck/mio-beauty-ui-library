@@ -1,0 +1,15 @@
+@use "../../../styles/variables.scss" as *;
+@use "../../../styles/type-primitives" as *;
+@use "../../../styles/mixins-font" as *;
+@use "../../../styles/tokens" as *;
+
+.storybook-sidebar-submenu {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.storybook-sidebar-submenu--border {
+    border-left: 1px solid $colorbase-gray-gray-4-value;
+    padding-left: 8px;
+}
