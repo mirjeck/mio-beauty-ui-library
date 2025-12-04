@@ -6,11 +6,14 @@ export const Tooltip = ({
     label = "This is a tooltip",
     position = "top",
     children,
+    mode = "light"
 }) => {
     const placement = ["top", "bottom", "left", "right"].includes(position) ? position : "top";
 
     return (
-        <div className={`storybook-tooltip storybook-tooltip--${placement}`}>
+        <div className={`storybook-tooltip storybook-tooltip--${placement}
+        ${mode === "dark" ? "storybook-tooltip--dark" : ""}
+        `}>
             <div className="storybook-tooltip__trigger">
                 {children}
             </div>
@@ -25,4 +28,5 @@ Tooltip.propTypes = {
     label: PropTypes.string,
     position: PropTypes.oneOf(["top", "bottom", "left", "right"]),
     children: PropTypes.node,
+    mode: PropTypes.oneOf(["light", "dark"])
 };

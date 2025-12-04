@@ -142,4 +142,40 @@
             }
         }
     }
+
+    /* DARK MODE */
+    &--dark {
+        .storybook-tooltip__bubble {
+            background: $colorbase-gray-gray-1-value;
+            /* oq fon */
+            color: $colorbase-gray-gray-19-value;
+            /* qora tekst */
+            box-shadow: #28283C26 0px 0px 12px 0px;
+
+            &::after {
+                border-color: $colorbase-gray-gray-1-value transparent transparent transparent;
+            }
+        }
+
+        /* BOTTOM variant uchun dark mode */
+        &.storybook-tooltip--bottom {
+            .storybook-tooltip__bubble::after {
+                border-color: transparent transparent $colorbase-gray-gray-1-value transparent;
+            }
+        }
+
+        /* LEFT variant uchun dark mode */
+        &.storybook-tooltip--left {
+            .storybook-tooltip__bubble::after {
+                border-color: transparent transparent transparent $colorbase-gray-gray-1-value;
+            }
+        }
+
+        /* RIGHT variant uchun dark mode */
+        &.storybook-tooltip--right {
+            .storybook-tooltip__bubble::after {
+                border-color: transparent $colorbase-gray-gray-1-value transparent transparent;
+            }
+        }
+    }
 }
