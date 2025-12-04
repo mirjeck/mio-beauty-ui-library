@@ -176,12 +176,12 @@
       color: $colors-texticons-accent-value;
 
       &:hover {
-        background-color: $colors-button-accent-ghost-onhover-value;
+        background-color: $colors-button-themed-ghost-onhover-value;
 
       }
 
       &:active {
-        background-color: $colors-button-accent-ghost-onpress-value;
+        background-color: $colors-button-themed-ghost-onpress-value;
       }
     }
   }

@@ -8,7 +8,7 @@ export const SideBarMenuRow = ({
 }) => {
 
     return (
-        <div className="storybook-sidebar-menu-row" onClick={handleClick}>
+        <div className="storybook-sidebar-menu-row" >
             <span className="storybook-sidebar-menu-row__label">{label}</span>
             <div className="storybook-sidebar-menu-row__actions">
                 <SideBarIcon variant="collapse" type="vertical" className="storybook-sidebar-menu-row__collapse-icon" />

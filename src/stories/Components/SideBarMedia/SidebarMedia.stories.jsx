@@ -10,6 +10,7 @@ import { SideBarMenuRow } from "./SideBarMenuRow.jsx";
 
 export default {
     title: "Example/Sidebar",
+    tags: ['autodocs'],
     parameters: {
         layout: "centered",
     },
