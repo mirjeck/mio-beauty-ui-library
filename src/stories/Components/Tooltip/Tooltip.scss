@@ -1,0 +1,145 @@
+@use "../../../styles/variables.scss" as *;
+@use "../../../styles/type-primitives" as *;
+@use "../../../styles/tokens" as *;
+
+.storybook-tooltip {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: $smooth;
+
+    &:hover .storybook-tooltip__bubble,
+    &:focus-within .storybook-tooltip__bubble {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(var(--tooltip-translate-x), var(--tooltip-translate-y-active));
+    }
+
+    &__trigger {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__bubble {
+        /* Default positioning (tooltip top) */
+        --tooltip-translate-x: -50%;
+        --tooltip-translate-y: 6px;
+        --tooltip-translate-y-active: 0;
+
+        --tooltip-top: auto;
+        --tooltip-bottom: calc(100% + 10px);
+        --tooltip-left: 50%;
+        --tooltip-right: auto;
+
+        --arrow-top: 100%;
+        --arrow-left: 50%;
+        --arrow-size: 7px;
+        --arrow-translate-x: -50%;
+        --arrow-translate-y: 0;
+
+        position: absolute;
+        padding: 4px 8px;
+        border-radius: 8px;
+        font-size: 12px;
+        font-family: sans-serif;
+        background: $colorbase-gray-gray-19-value;
+        color: $colorbase-gray-gray-1-value;
+        white-space: nowrap;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity $smooth, transform $smooth;
+        z-index: 10;
+        border: 0;
+        top: var(--tooltip-top);
+        bottom: var(--tooltip-bottom);
+        left: var(--tooltip-left);
+        right: var(--tooltip-right);
+        transform: translate(var(--tooltip-translate-x), var(--tooltip-translate-y));
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: var(--arrow-top);
+            left: var(--arrow-left);
+            width: 0;
+            height: 0;
+            transform: translate(var(--arrow-translate-x), var(--arrow-translate-y));
+            border-style: solid;
+            border-width: var(--arrow-size) var(--arrow-size) 0 var(--arrow-size);
+            border-color: $colorbase-gray-gray-19-value transparent transparent transparent;
+            pointer-events: none;
+        }
+    }
+
+    /* BOTTOM */
+    &--bottom {
+        .storybook-tooltip__bubble {
+            --tooltip-top: calc(100% + 10px);
+            --tooltip-bottom: auto;
+            --tooltip-translate-y: -6px;
+            --tooltip-translate-y-active: 0;
+
+            --arrow-top: calc(var(--arrow-size) * -1);
+            --arrow-left: 50%;
+            --arrow-translate-x: -50%;
+            --arrow-translate-y: 13%;
+
+            &::after {
+                border-width: 0 var(--arrow-size) var(--arrow-size) var(--arrow-size);
+                border-color: transparent transparent $colorbase-gray-gray-19-value transparent;
+            }
+        }
+    }
+
+    /* LEFT */
+    &--left {
+        .storybook-tooltip__bubble {
+            --tooltip-top: 50%;
+            --tooltip-bottom: auto;
+
+            --tooltip-left: auto;
+            --tooltip-right: calc(100% + 10px);
+
+            --tooltip-translate-x: 6px;
+            --tooltip-translate-y: -50%;
+            --tooltip-translate-y-active: -50%;
+
+            --arrow-top: 50%;
+            --arrow-left: 100%;
+            --arrow-translate-x: -12%;
+            --arrow-translate-y: -52%;
+
+            &::after {
+                border-width: var(--arrow-size) 0 var(--arrow-size) var(--arrow-size);
+                border-color: transparent transparent transparent $colorbase-gray-gray-19-value;
+            }
+        }
+    }
+
+    /* RIGHT */
+    &--right {
+        .storybook-tooltip__bubble {
+            --tooltip-top: 50%;
+            --tooltip-bottom: auto;
+
+            --tooltip-left: calc(100% + 10px);
+            --tooltip-right: auto;
+
+            --tooltip-translate-x: -6px;
+            --tooltip-translate-y: -50%;
+            --tooltip-translate-y-active: -50%;
+
+            --arrow-top: 50%;
+            --arrow-left: calc(var(--arrow-size) * -1);
+            --arrow-translate-x: 25%;
+            --arrow-translate-y: -50%;
+
+            &::after {
+                border-width: var(--arrow-size) var(--arrow-size) var(--arrow-size) 0;
+                border-color: transparent $colorbase-gray-gray-19-value transparent transparent;
+            }
+        }
+    }
+}
